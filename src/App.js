@@ -15,15 +15,15 @@ class App extends React.Component {
     console.log(`accounts[0]`, accounts[0]);
 
     const manager = await lot.methods.manager().call({from : accounts[0]});
-    console.log(manager);
+    //console.log(manager);
 
     const players = await lot.methods.getPlayers().call({
       from: accounts[0],
     });
-    console.log(players);
+    //console.log(players);
 
     const balance = await web3.eth.getBalance(lot.options.address);
-    console.log(balance);
+    //console.log(balance);
 
     this.setState({ manager , players , balance });
   }
